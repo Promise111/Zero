@@ -70,6 +70,11 @@ func Divide(first, second string, shouldRoundUp bool) (result string) {
 		return
 	}
 
+	if secondNum == 0 {
+		fmt.Println("Error: Division by zero")
+		return
+	}
+
 	if shouldRoundUp {
 		return fmt.Sprintf("%.2f", firstNum/secondNum)
 	}
